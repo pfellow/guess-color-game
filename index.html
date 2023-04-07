@@ -11,35 +11,16 @@
   <body>
     <header class="header">
       <h2 class="title">Color Game</h2>
-      <h3 class="color-string">rgb(255, 0, 0)</h3>
+      <h3 class="color-string" data-string>rgb(255, 0, 0)</h3>
       <form class="form">
         <fieldset>
           <legend>Format</legend>
           <div class="radio-group" data-color-format>
-            <input
-              type="radio"
-              name="format"
-              data-format
-              id="rgb"
-              value="rgb"
-              checked
-            />
+            <input type="radio" name="format" id="rgb" value="rgb" checked />
             <label for="rgb">RGB</label>
-            <input
-              type="radio"
-              name="format"
-              data-format
-              id="hex"
-              value="hex"
-            />
+            <input type="radio" name="format" id="hex" value="hex" />
             <label for="hex">Hex</label>
-            <input
-              type="radio"
-              name="format"
-              data-format
-              id="hsl"
-              value="hsl"
-            />
+            <input type="radio" name="format" id="hsl" value="hsl" />
             <label for="hsl">HSL</label>
           </div>
         </fieldset>
@@ -52,24 +33,11 @@
               id="easy"
               value="easy"
               checked
-              data-difficulty
             />
             <label for="easy">Easy</label>
-            <input
-              type="radio"
-              name="difficulty"
-              id="medium"
-              value="medium"
-              data-difficulty
-            />
+            <input type="radio" name="difficulty" id="medium" value="medium" />
             <label for="medium">Medium</label>
-            <input
-              type="radio"
-              name="difficulty"
-              id="hard"
-              value="hard"
-              data-difficulty
-            />
+            <input type="radio" name="difficulty" id="hard" value="hard" />
             <label for="hard">Hard</label>
           </div>
         </fieldset>

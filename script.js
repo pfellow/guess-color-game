@@ -1,12 +1,12 @@
 import { RGBToHSL, RGBToHex } from "./colorFormatConverter";
 
-let colorFormat = "rgb";
-let difficulty = "easy";
+let colorFormat = document.querySelector('[name="format"]:checked').value;
+let difficulty = document.querySelector('[name="difficulty"]:checked').value;
 let difficultySettings = { easy: 75, medium: 50, hard: 25 };
 let colorToGuess;
-const formatRadios = document.querySelectorAll("[data-format]");
-const difficultyRadios = document.querySelectorAll("[data-difficulty]");
-const colorToGuessDisplay = document.querySelector(".color-string");
+const formatRadios = document.querySelectorAll('[name="format"]');
+const difficultyRadios = document.querySelectorAll('[name="difficulty"]');
+const colorToGuessDisplay = document.querySelector("[data-string]");
 const colorButtons = document.querySelectorAll("[data-button]");
 const nextColorButton = document.querySelector("[data-next]");
 const result = document.querySelector("[data-result]");
@@ -50,10 +50,7 @@ function fillChoices() {
   );
 
   let colors = [colorToGuess, ...getOtherColors(5)];
-  colors = colors
-    .map((value) => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value);
+  colors = colors.sort(() => Math.random() - 0.5);
 
   correctAnswer = colors.indexOf(colorToGuess);
   colorToGuessDisplay.textContent = formatColor(colorToGuess);

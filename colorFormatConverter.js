@@ -45,8 +45,8 @@ export function RGBToHSL(r, g, b) {
   s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
 
   // Multiply l and s by 100
-  s = +(s * 100).toFixed(1);
-  l = +(l * 100).toFixed(1);
+  s = +(s * 100).toFixed(0);
+  l = +(l * 100).toFixed(0);
 
-  return "hsl(" + h + "," + s + "%," + l + "%)";
+  return "hsl(" + h + ", " + s + "%, " + l + "%)";
 }
