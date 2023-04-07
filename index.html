@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Color Game</title>
+  </head>
+  <body>
+    <header class="header">
+      <h2 class="title">Color Game</h2>
+      <h3 class="color-string">rgb(255, 0, 0)</h3>
+      <form class="form">
+        <fieldset>
+          <legend>Format</legend>
+          <div class="radio-group" data-color-format>
+            <input
+              type="radio"
+              name="format"
+              data-format
+              id="rgb"
+              value="rgb"
+              checked
+            />
+            <label for="rgb">RGB</label>
+            <input
+              type="radio"
+              name="format"
+              data-format
+              id="hex"
+              value="hex"
+            />
+            <label for="hex">Hex</label>
+            <input
+              type="radio"
+              name="format"
+              data-format
+              id="hsl"
+              value="hsl"
+            />
+            <label for="hsl">HSL</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Difficulty</legend>
+          <div class="radio-group">
+            <input
+              type="radio"
+              name="difficulty"
+              id="easy"
+              value="easy"
+              checked
+              data-difficulty
+            />
+            <label for="easy">Easy</label>
+            <input
+              type="radio"
+              name="difficulty"
+              id="medium"
+              value="medium"
+              data-difficulty
+            />
+            <label for="medium">Medium</label>
+            <input
+              type="radio"
+              name="difficulty"
+              id="hard"
+              value="hard"
+              data-difficulty
+            />
+            <label for="hard">Hard</label>
+          </div>
+        </fieldset>
+      </form>
+    </header>
+    <div class="color-grid">
+      <button class="button0" data-button="0"></button>
+      <button class="button1" data-button="1"></button>
+      <button class="button2" data-button="2"></button>
+      <button class="button3" data-button="3"></button>
+      <button class="button4" data-button="4"></button>
+      <button class="button5" data-button="5"></button>
+    </div>
+    <div class="results">
+      <div data-result>Click a color to guess</div>
+      <button data-next>Next Color</button>
+    </div>
+  </body>
+</html>

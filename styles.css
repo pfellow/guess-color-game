@@ -1,0 +1,106 @@
+:root {
+  --button0-color: blue;
+  --button1-color: red;
+  --button2-color: green;
+  --button3-color: yellow;
+  --button4-color: purple;
+  --button5-color: grey;
+}
+
+.button0 {
+  background-color: var(--button0-color);
+}
+
+.button1 {
+  background-color: var(--button1-color);
+}
+
+.button2 {
+  background-color: var(--button2-color);
+}
+
+.button3 {
+  background-color: var(--button3-color);
+}
+
+.button4 {
+  background-color: var(--button4-color);
+}
+
+.button5 {
+  background-color: var(--button5-color);
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.title,
+.color-string {
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.title {
+  color: #777;
+}
+
+.form {
+  display: flex;
+}
+
+.form fieldset {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.radio-group {
+  display: grid;
+  justify-content: center;
+  justify-items: flex-start;
+  grid-template-columns: auto auto;
+  gap: 0.25rem;
+}
+
+.radio-group > * {
+  cursor: pointer;
+}
+
+.color-grid {
+  display: grid;
+  gap: 0.5rem;
+  justify-content: center;
+  max-width: 16rem;
+  margin: auto;
+  padding: 0.5rem;
+  grid-template-columns: repeat(auto-fill, 5rem);
+  grid-auto-rows: 5rem;
+}
+
+.color-grid > * {
+  border-radius: 0.5rem;
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+}
+
+.color-grid > :disabled {
+  cursor: default;
+}
+
+.color-grid > .wrong {
+  opacity: 0.3;
+}
+
+.results {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.results.hide {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
